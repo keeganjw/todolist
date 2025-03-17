@@ -1,10 +1,10 @@
-import TodoItem from "./TodoItem";
+import TodoItem from './TodoItem';
 
 export default function TodoList({ todos, toggleTodo, deleteTodo }) {
 	return (
 		<>
 			<ul className="list">
-				{todos.length === 0 && "None"}
+				{todos.length === 0 && 'None'}
 				{todos.map((todo) => {
 					return (
 						<TodoItem

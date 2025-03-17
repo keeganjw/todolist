@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import NewTodoForm from "./NewTodoForm";
-import TodoList from "./TodoList";
+import { useEffect, useState } from 'react';
+import TodoItemNew from './TodoItemNew';
+import TodoList from './TodoList';
 
-function App() {
+function Todos() {
 	const [todos, setTodos] = useState(() => {
-		const localValue = localStorage.getItem("TODOS");
+		const localValue = localStorage.getItem('TODOS');
 		let result = [];
 
 		if (localValue) result = JSON.parse(localValue);
@@ -14,7 +13,7 @@ function App() {
 	});
 
 	useEffect(() => {
-		localStorage.setItem("TODOS", JSON.stringify(todos));
+		localStorage.setItem('TODOS', JSON.stringify(todos));
 	}, [todos]);
 
 	function addTodo(title) {
@@ -43,7 +42,7 @@ function App() {
 
 	return (
 		<>
-			<NewTodoForm addTodo={addTodo} />
+			<TodoItemNew addTodo={addTodo} />
 
 			<h1 className="header">Todo</h1>
 			<TodoList
@@ -62,4 +61,4 @@ function App() {
 	);
 }
 
-export default App;
+export default Todos;
