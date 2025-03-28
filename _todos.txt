@@ -1,0 +1,8 @@
+Tenor Todos
+-------------
+* Be able to select status on add
+
+
+Completed
+-------------
+X Make important & urgent dropdowns one menu

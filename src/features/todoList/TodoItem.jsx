@@ -3,8 +3,7 @@ import TodoStatusToggles from "./TodoStatusToggles";
 export default function TodoItem({
   todo,
   toggleCheck,
-  toggleImportant,
-  toggleUrgent,
+  toggleStatus,
   removeTodo,
 }) {
   return (
@@ -19,11 +18,7 @@ export default function TodoItem({
         {todo.title}
       </label>
 
-      <TodoStatusToggles
-        todo={todo}
-        toggleImportant={toggleImportant}
-        toggleUrgent={toggleUrgent}
-      />
+      <TodoStatusToggles todo={todo} toggleStatus={toggleStatus} />
 
       <button
         onClick={() => removeTodo(todo.id)}
