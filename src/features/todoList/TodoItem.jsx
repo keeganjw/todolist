@@ -1,9 +1,9 @@
-import TodoStatusToggles from "./TodoStatusToggles";
+import TodoStatus from "./TodoStatus";
 
 export default function TodoItem({
   todo,
   toggleCheck,
-  toggleStatus,
+  changeStatus,
   removeTodo,
 }) {
   return (
@@ -18,7 +18,7 @@ export default function TodoItem({
         {todo.title}
       </label>
 
-      <TodoStatusToggles todo={todo} toggleStatus={toggleStatus} />
+      <TodoStatus todo={todo} changeStatus={changeStatus} />
 
       <button
         onClick={() => removeTodo(todo.id)}

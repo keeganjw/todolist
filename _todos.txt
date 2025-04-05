@@ -1,8 +1,8 @@
 Tenor Todos
 -------------
-* Be able to select status on add
-
+* Integrate statusList.js
 
 Completed
 -------------
+X Be able to select status on add
 X Make important & urgent dropdowns one menu

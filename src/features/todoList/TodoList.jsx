@@ -4,7 +4,7 @@ export default function TodoList({
   todos,
   listName,
   toggleCheck,
-  toggleStatus,
+  changeStatus,
   removeTodo,
 }) {
   if (todos.length === 0) {
@@ -21,7 +21,7 @@ export default function TodoList({
             <TodoItem
               todo={todo}
               toggleCheck={toggleCheck}
-              toggleStatus={toggleStatus}
+              changeStatus={changeStatus}
               removeTodo={removeTodo}
               key={todo.id}
             />
